@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var titleCase = function (str) {
+        var str = "the quick brown fox jumped over the lazy dog";
+        var result = [];
+
+        var words = str.split(" ");
+
+        for (var i = 0; i < words.length; i++) {
+          var word = words[i].split("");
+
+          word[0] = word[0].toUpperCase();
+
+          result.push(word.join(""));
+        }
+        return result.join(" ");
+      };
+      console.log(titleCase(" "));
+    </script>
+  </body>
+</html>
