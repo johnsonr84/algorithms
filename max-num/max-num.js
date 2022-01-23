@@ -1,14 +1,17 @@
 // Write code to return the largest number in the given array
 
-var maxNum = function(arr) {
-    var max = arr[0];
-
-    for (var i = 1; i < arr.length; i++) {
-        var currentNum = arr[i];
-
-        if (currentNum > max) {
-            max = currentNum;
-        }
+var characterCount = function(str) {
+    var charMap = {};
+  
+    for (var i = 0; i < str.length; i++) {
+      var char = str[i];
+  
+      if (char in charMap) {
+        charMap[char]++;
+      } else {
+        charMap[char] = 1;
+      }
     }
-    return max;
-};
+  
+    return charMap;
+  };
