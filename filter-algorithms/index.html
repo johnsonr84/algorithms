@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Funny Case</title>
+  </head>
+  <body>
+    <script>
+      // filter lets you loop over an array and remove elements
+      var filter = (arr, cb) => {
+        var result = [];
+        for (var index = 0; index < arr.length; index++) {
+          var currentElement = arr[index];
+          if (cb(currentElement, index)) {
+            result.push(currentElement);
+          }
+        }
+        return result;
+      };
+
+      var evenNumbers = filter(
+        numbers,
+        (currentElement) => currentElement % 2 === 0
+      );
+
+      // Prints `[ 2, 4, 6, 8, 10 ]`
+      console.log(evenNumbers);
+    </script>
+  </body>
+</html>
