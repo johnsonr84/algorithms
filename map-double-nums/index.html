@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Funny Case</title>
+  </head>
+  <body>
+    <script>
+      // 2. Map lets you loop over an array and modify the elements inside
+      var map = (arr, cb) => {
+        var result = [];
+        for (var index = 0; index < arr.length; index++) {
+          var currentElement = arr[index];
+          result.push(cb(currentElement, index));
+        }
+        return result;
+      };
+
+      var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+      var doubled = map(numbers, (element) => element * 2);
+
+      // Prints `[ 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ]`
+      console.log(doubled);
+    </script>
+  </body>
+</html>
