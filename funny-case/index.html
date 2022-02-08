@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Funny Case</title>
+  </head>
+  <body>
+    <script>
+      // 1. funnyCase makes each letter in a string the opposite case as the one before
+      var funnyCase = (string) => {
+        var newString = "";
+        for (var i = 0; i < string.length; i++) {
+          if (i % 2 === 0) newString += string[i].toLowerCase();
+          else newString += string[i].toUpperCase();
+        }
+        return newString;
+      };
+
+      // Prints `yOu cAn't jUsT Do wHaTeVeR YoU WaNt aLl tHe tImE!`
+      console.log(
+        funnyCase("You can't just do whatever you want all the time!")
+      );
+    </script>
+  </body>
+</html>
